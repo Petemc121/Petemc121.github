@@ -16,6 +16,17 @@ window.onload = function() {
   arrowInit()
 };
 
+document.addEventListener('touchstart', this.touchstart);
+document.addEventListener('touchmove', this.touchmove);
+
+function touchstart(e) {
+    e.preventDefault()
+}
+
+function touchmove(e) {
+    e.preventDefault()
+}
+
 
 function growPlusNav(element) {
   element.style.width = "450px";
