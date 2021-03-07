@@ -1,1 +1,180 @@
-"hello world" 
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+      <div id="header">
+        <div id="menu1" class="menu">CORONA  </div>
+        <img id="corona2" src="Corona2.png">
+          <div id="menu2" class="menu">UPDATES</div>
+          
+      </div>
+    <div class="center">
+      <img id="corona" src="corona.png">
+      
+    </div>
+    <div class="center">
+      <img id="arrow" src="arrow.png">
+    </div>
+
+    <div class="center">
+      <p id="click">Click me!</p>
+      
+    </div>
+
+   
+
+    <div class="centerCon">
+    <div class="center2">
+      <img class="nav" id="globe" src="globe.png">
+    <img class="nav" id="uk" src="uk.png">
+      <img class="nav" id="news" src="news.png">
+  </div>
+  </div>
+
+  <div class="center">
+     <div id ="invisDiv1"></div>
+
+  <div id="graphTab">
+    
+    <div class="center4">
+    <div id="chartCon">
+    <div id = "chart">
+    </div>
+    </div>
+
+    <div id="newCaseCon" class="center4">
+      <h1 id="newCaseTitle">New Cases Today</h1>
+      <div id="todayCases"></div>
+    </div>
+  </div>
+  
+  </div>
+  
+</div>
+
+<div id ="invisDiv2"></div>
+
+  <div id="syringeTab">
+
+    <!-- <div class="center">
+      <div id="circle-border">
+      <div id = "circle"></div>
+      </div>
+    </div> -->
+
+    <div class="progress">
+      <svg class="progress-circle" width="200px" height="200px" xmlns="http://www.w3.org/2000/svg">
+        <svg class="progress-circle" width="200px" height="200px" viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
+        <circle class="progress-circle-back"
+              cx="100" cy="100" r="90" ></circle>
+              </svg>
+        <svg class="progress-circle" width="200px" height="200px" viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
+          <circle class="progress-circle-mid"
+                cx="100" cy="100" r="70" ></circle>
+                </svg>
+          <circle class="progress-circle-prog"
+                  cx="100" cy="100" r="80"></circle>
+      </svg>
+      <div class="progress-text" data-progress="0"><p class="title">Recovery rate</p><p id="RR"></p></div>
+      <div class="progress-text2" data-progress="0"><p class="title">Death rate</p><p id="DR"></p></div>
+
+  </div>	
+
+
+  <div id=stats>
+    <div class="centerCon">
+
+          
+
+          
+            <div class="center3">
+
+              <div class="center4">
+              <p id="recoveredT" class="statsT">Recovered</p>
+              <p class="statsD" id=recoveredStat></p>
+              </div>
+              <div class="center4">
+              <p id="infectedT" class="statsT">Infected</p>
+              <div class="statsD" id="infectedStat"></div>
+              </div>
+              <div class="center4">
+              <p id="deceasedT" class="statsT">Deceased</p>
+              <p class="statsD" id="deceasedStat"></p>
+              </div>
+
+            </div>
+    </div>
+
+  </div>
+
+          <div class="center">
+          <select id="countrySelect"></select>
+          </div>
+
+    
+    
+  </div>
+
+
+  <div id ="invisDiv3"></div>
+
+
+  <div id="newsTab">
+
+    <div id="topTitle" class="infoTitle">Latest NHS Covid-19 Information</div>
+
+
+    <div class="infoTitle">Overview</div>
+
+    <div class="info" id ="overview">
+    </div>
+
+    <div class="infoTitle">Symptoms</div>
+
+    <div class="info" id ="symptoms">
+    </div>
+
+    <div class="infoTitle">Precautions</div>
+
+    <div class="info" id ="selfIsolation">
+    </div>
+
+    <div class="infoTitle">Treatment</div>
+
+    <div class="info" id ="treatments">
+    </div>
+
+    <div class="infoTitle">Self Care</div>
+
+    <div class="info" id ="SelfCare">
+    </div>
+
+    <div class="infoTitle">Prevention</div>
+
+    <div class="info" id ="prevention">
+    </div>
+
+  </div>
+
+        
+        <script src="nano.js" async defer></script>
+        <script src="fetchAPI.js" async defer></script>
+        <script src="fetchAPI2.js" async defer></script>
+        <script src="fetchAPI3.js" async defer></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
