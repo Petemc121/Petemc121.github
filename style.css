@@ -183,12 +183,65 @@ body {
 
 #graphTab {
   width: 98.08vw;
-  height: 50%;
+  height: 60%;
   position: absolute;
-  bottom: -50%;
+  bottom: -60%;
   background-color: rgb(4, 123, 160);
   border-radius: 5px;
   transition: transform 0.5s linear;
+}
+
+.info {
+  margin-top: 15px;
+  color: white;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .info {
+    width: 50%;
+    left: 25%;
+  }
+}
+
+.infoTitle {
+  margin-top: 20px;
+  width: 80%;
+  color: rgb(243, 219, 7);
+  position: relative;
+  left: 10%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#topTitle {
+  width: 90%;
+  color: black;
+  left: 5%;
+}
+
+#newCaseCon {
+  position: relative;
+  top: 30px;
+}
+
+#newCaseTitle {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#todayCases {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 0, 0);
 }
 
 #chart {
@@ -471,6 +524,14 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#chartCon {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #d0f2ec;
+  height: 320px;
+  position: relative;
+  top: 20px;
 }
 
 @media only screen and (max-width: 800px) {
